@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { SUSE } from 'next/font/google'
 import './globals.scss'
-import { Sidebar } from '@/components/layout/sidebar/Sidebar'
-import Content from '@/components/layout/content/Content'
 import { Layout } from '@/components/layout/Layout'
 
 const SUSESans = SUSE({
