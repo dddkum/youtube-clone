@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
-import { SUSE } from 'next/font/google'
+import { Ubuntu } from 'next/font/google'
 import './globals.scss'
 import { Layout } from '@/components/layout/Layout'
 
-const SUSESans = SUSE({
-	variable: '--font-geist-sans',
-	subsets: ['latin']
+const ubuntu = Ubuntu({
+	variable: '--font-ubuntu',
+	subsets: ['latin'],
+	weight: '500',
 })
+
 
 export const metadata: Metadata = {
 	title: 'YOUTUBE',
@@ -20,7 +22,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={`${SUSESans.variable} antialiased`}>
+			<body className={`${ubuntu.variable} antialiased`}>
 				<Layout>{children}</Layout>
 			</body>
 		</html>

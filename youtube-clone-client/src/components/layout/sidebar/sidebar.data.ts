@@ -47,7 +47,8 @@ export const SIDEBAR_DATA: ISidebarItem[] = [
 	{
 		icon: FolderHeart,
 		label: 'Liked videos',
-		link: PUBLIC_PAGE_CONFIG.LIKED_VIDEOS
+		link: PUBLIC_PAGE_CONFIG.LIKED_VIDEOS,
+		isBottomBorder: true
 	}
 ]
 

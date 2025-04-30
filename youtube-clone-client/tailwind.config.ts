@@ -5,7 +5,16 @@ const config: Config = {
 	content: ['./src/**/*.{ts,tsx}'],
 	theme: {
 		extend: {
-			colors: COLORS
+			colors: COLORS,
+			padding: {
+				layout: '1.25rem'
+			},
+			transitionTimingFunction: {
+				DEFAULT: 'ease-in-out',
+			},
+			transitionDuration: {
+				DEFAULT: '333ms'
+			}
 		}
 	},
 	plugins: []

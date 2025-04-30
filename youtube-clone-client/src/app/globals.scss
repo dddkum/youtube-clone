@@ -1,6 +1,13 @@
 @import 'tailwindcss';
 @config "../../tailwind.config.ts";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--sidebar-width: 15rem;
+}
 
 body {
-	@apply text-white bg-bg;
+	@apply text-white bg-bg text-base;
 }
