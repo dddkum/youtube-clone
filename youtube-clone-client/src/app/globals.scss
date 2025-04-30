@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+body {
+  @apply text-white bg-bg;
+}
+
