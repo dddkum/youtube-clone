@@ -1,8 +1,9 @@
 'use client'
 import { VideoItem } from '@/ui/video-item/VideoItem'
-import { Target } from 'lucide-react'
+import { Compass, Dot, Target } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { videoService } from '@/services/video.service'
+import { Heading } from '@/ui/Heading'
 
 function Explore() {
 	const { data, isLoading } = useQuery({
@@ -12,7 +13,7 @@ function Explore() {
 
 	return (
 		<section>
-			<h2>Explore new videos</h2>
+			<Heading Icon={Compass}>Explore new videos</Heading>
 			<div className='grid grid-cols-4 gap-6'>
 				{isLoading
 					? 'Loading...'
@@ -20,7 +21,7 @@ function Explore() {
 							<VideoItem
 								key={video.id}
 								video={video}
-								Icon={Target}
+								Icon={Dot}
 							/>
 						))}
 			</div>

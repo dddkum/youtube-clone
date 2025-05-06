@@ -3,6 +3,7 @@ import { videoService } from '@/services/video.service'
 import { VideoItem } from '@/ui/video-item/VideoItem'
 import { Flame } from 'lucide-react'
 import type { Metadata } from 'next'
+import { Heading } from '@/ui/Heading'
 
 export const revalidate = 100
 export const dynamic = 'force-static'
@@ -26,8 +27,8 @@ export default async function Home() {
 	return (
 		<>
 			<section>
-				<h2>Trending videos</h2>
-				<div className='grid grid-cols-4 gap-6'>
+				<Heading Icon={Flame}>Trending videos</Heading>
+				<div className='grid grid-cols-4 gap-6 mb-10'>
 					{trendingVideos.length &&
 						trendingVideos.map(video => (
 							<VideoItem
