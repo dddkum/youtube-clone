@@ -1,6 +1,6 @@
 'use client'
 import { VideoItem } from '@/ui/video-item/VideoItem'
-import { Compass, Dot, Target } from 'lucide-react'
+import { Compass, Dot} from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
 import { videoService } from '@/services/video.service'
 import { Heading } from '@/ui/Heading'
