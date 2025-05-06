@@ -22,6 +22,7 @@ function Explore() {
 						className='h-55 rounded-md'
 					/>
 				) : (
+					!!data?.data.videos.length &&
 					data?.data.videos.map(video => (
 						<VideoItem
 							key={video.id}
