@@ -1,10 +1,24 @@
-import Explore from '@/app/explore/Explore'
+import Explore from '@/app/(public)/explore/Explore'
 import { videoService } from '@/services/video.service'
 import { VideoItem } from '@/ui/video-item/VideoItem'
 import { Flame } from 'lucide-react'
+import type { Metadata } from 'next'
 
 export const revalidate = 100
 export const dynamic = 'force-static'
+
+export const metadata: Metadata = {
+	title: 'Explore',
+	description: 'The best platform to share your videos',
+	alternates: {
+		canonical: '/'
+	},
+	openGraph: {
+		type: 'website',
+		url: '/',
+		title: 'VidddeoME',
+	}
+}
 
 export default async function Home() {
 	const data = await videoService.getTrendingVideos()
@@ -17,7 +31,7 @@ export default async function Home() {
 					{trendingVideos.length &&
 						trendingVideos.map(video => (
 							<VideoItem
-								key={1}
+								key={video.id}
 								video={video}
 								Icon={Flame}
 							/>

@@ -11,8 +11,11 @@ const ubuntu = Ubuntu({
 })
 
 export const metadata: Metadata = {
-	title: 'YOUTUBE',
-	description: 'BEST APP FOR VIDEO WATCHING'
+	title: {
+		absolute: 'VidddeoME',
+		template: `%s | VidddeoME`
+	},
+	description: 'Enjoy watching videos and have a good time'
 }
 
 export default function RootLayout({
