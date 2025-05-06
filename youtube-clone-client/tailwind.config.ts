@@ -10,7 +10,7 @@ const config: Config = {
 				layout: '1.25rem'
 			},
 			transitionTimingFunction: {
-				DEFAULT: 'ease-in-out',
+				DEFAULT: 'ease-in-out'
 			},
 			transitionDuration: {
 				DEFAULT: '333ms'
