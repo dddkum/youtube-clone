@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import './globals.scss'
 import { Layout } from '@/components/layout/Layout'
+import { Providers } from '@/providers/Providers'
 
 const ubuntu = Ubuntu({
 	variable: '--font-ubuntu',
 	subsets: ['latin'],
-	weight: '500',
+	weight: '500'
 })
-
 
 export const metadata: Metadata = {
 	title: 'YOUTUBE',
@@ -23,7 +23,9 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${ubuntu.variable} antialiased`}>
-				<Layout>{children}</Layout>
+				<Providers>
+					<Layout>{children}</Layout>
+				</Providers>
 			</body>
 		</html>
 	)
