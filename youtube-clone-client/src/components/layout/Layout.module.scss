@@ -1,44 +1,21 @@
-@keyframes hideSidebar {
-	from {
-		transform: translateX(0);
-		width: var(--sidebar-width);
-	}
-	to {
-		width: 4rem;
-		//transform: translateX(-100%);
+.hiddenSidebar > aside {
+	width: 3.8rem;
+	flex-grow: 0;
+
+	> nav > div:first-child {
+		opacity: 0;
+		transition: opacity 0.35s;
 	}
 }
 
-@keyframes showSidebar {
-	from {
-		width: 4rem;
-		//transform: translateX(-100%);
-	}
-	to {
-		transform: translateX(0);
-		width: var(--sidebar-width);
-	}
+.hiddenSidebar > div {
+  width: 100%;
 }
 
-.hiddenSidebar {
-	> aside {
-		animation: hideSidebar 0.35s forwards;
-		flex-grow: 0;
-		>nav {
-			>div:first-child {
-				transition: opacity 0.3s ease-in-out;
-				opacity: 0;
-			}
-		}
-	}
-	> div {
-		width: 100%;
-	}
+.openedSidebar > aside {
+  width: var(--sidebar-width);
 }
 
-.openedSidebar {
-	> aside {
-		animation: showSidebar 0.3s forwards;
-		width: var(--sidebar-width);
-	}
+.initialSidebar > aside {
+  transition: width 0.35s;
 }
