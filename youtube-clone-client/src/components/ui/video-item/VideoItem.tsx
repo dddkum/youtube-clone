@@ -50,7 +50,12 @@ export function VideoItem({ video, Icon }: Props) {
 				</div>
 			</div>
 			<div>
-				<Link href={PAGE.VIDEO(video.videoFileName)} className='line-clamp-2 leading-snug'>{video.title}</Link>
+				<Link
+					href={PAGE.VIDEO(video.videoFileName)}
+					className='line-clamp-2 leading-snug'
+				>
+					{video.title}
+				</Link>
 			</div>
 			<div>
 				<Link
@@ -58,9 +63,14 @@ export function VideoItem({ video, Icon }: Props) {
 					className='flex items-center gap-1'
 				>
 					<span className='text-gray-400 text-sm'>{video.channel.user.name}</span>
-					<span>
-						<Check className='text-green-500' size={15} />
-					</span>
+					{video.channel.isVerified && (
+						<span>
+							<Check
+								className='text-green-500'
+								size={15}
+							/>
+						</span>
+					)}
 				</Link>
 			</div>
 		</div>
