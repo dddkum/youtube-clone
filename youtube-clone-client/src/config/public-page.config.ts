@@ -1,6 +1,5 @@
 class publicPageConfig {
 	HOME = '/'
-	SEARCH = '/search'
 	TRENDING = '/trending'
 	SUBSCRIPTION = '/subscription'
 	HISTORY = '/history'
@@ -15,6 +14,10 @@ class publicPageConfig {
 
 	CHANNEL(path: string) {
 		return `/c/${path}`
+	}
+
+	SEARCH(searchTerm: string) {
+		return `/s?term=${searchTerm}`
 	}
 }
 
