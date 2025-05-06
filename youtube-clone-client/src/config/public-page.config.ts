@@ -9,6 +9,14 @@ class publicPageConfig {
 	SEND_FEEDBACK = 'send_feedback'
 	VIDEO_GAMES = 'video_games'
 	MY_CHANNEL = 'channel'
+
+	VIDEO(path: string) {
+		return `/v/${path}`
+	}
+
+	CHANNEL(path: string) {
+		return `/c/${path}`
+	}
 }
 
-export const PUBLIC_PAGE_CONFIG = new publicPageConfig()
+export const PAGE = new publicPageConfig()

@@ -10,44 +10,44 @@ import {
 	TvMinimalPlay
 } from 'lucide-react'
 import type { ISidebarItem } from '@/components/layout/sidebar/sidebar.types'
-import { PUBLIC_PAGE_CONFIG } from '@/config/public-page.config'
+import { PAGE } from '@/config/public-page.config'
 
 export const SIDEBAR_DATA: ISidebarItem[] = [
 	{
 		icon: Compass,
 		label: 'Explore',
-		link: PUBLIC_PAGE_CONFIG.HOME
+		link: PAGE.HOME
 	},
 	{
 		icon: Flame,
 		label: 'Trending',
-		link: PUBLIC_PAGE_CONFIG.TRENDING
+		link: PAGE.TRENDING
 	},
 	{
 		icon: Gamepad2,
 		label: 'Video games',
-		link: PUBLIC_PAGE_CONFIG.VIDEO_GAMES,
+		link: PAGE.VIDEO_GAMES,
 		isBottomBorder: true
 	},
 	{
 		icon: TvMinimalPlay,
 		label: 'My Channel',
-		link: PUBLIC_PAGE_CONFIG.MY_CHANNEL
+		link: PAGE.MY_CHANNEL
 	},
 	{
 		icon: CirclePlay,
 		label: 'Subscriptions',
-		link: PUBLIC_PAGE_CONFIG.SUBSCRIPTION
+		link: PAGE.SUBSCRIPTION
 	},
 	{
 		icon: History,
 		label: 'History',
-		link: PUBLIC_PAGE_CONFIG.HISTORY
+		link: PAGE.HISTORY
 	},
 	{
 		icon: FolderHeart,
 		label: 'Liked videos',
-		link: PUBLIC_PAGE_CONFIG.LIKED_VIDEOS,
+		link: PAGE.LIKED_VIDEOS,
 		isBottomBorder: true
 	}
 ]
@@ -56,11 +56,11 @@ export const ADDITIONAL_SIDEBAR_DATA: ISidebarItem[] = [
 	{
 		icon: Settings,
 		label: 'Settings',
-		link: PUBLIC_PAGE_CONFIG.SETTINGS
+		link: PAGE.SETTINGS
 	},
 	{
 		icon: CircleAlert,
 		label: 'Send feedback',
-		link: PUBLIC_PAGE_CONFIG.SEND_FEEDBACK
+		link: PAGE.SEND_FEEDBACK
 	}
 ]

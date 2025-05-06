@@ -1,7 +1,7 @@
 import { CirclePlay, Menu } from 'lucide-react'
 import { COLORS } from '@/constants/colors.const'
 import Link from 'next/link'
-import { PUBLIC_PAGE_CONFIG } from '@/config/public-page.config'
+import { PAGE } from '@/config/public-page.config'
 
 export function SidebarHeader({ toggleSidebar }: { toggleSidebar: () => void }) {
 	return (
@@ -13,7 +13,7 @@ export function SidebarHeader({ toggleSidebar }: { toggleSidebar: () => void }) 
 				<Menu />
 			</button>
 			<Link
-				href={PUBLIC_PAGE_CONFIG.HOME}
+				href={PAGE.HOME}
 				className='flex items-center gap-1.5'
 			>
 				<CirclePlay
