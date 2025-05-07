@@ -26,9 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${ubuntu.variable} antialiased`}>
-				<Providers>
-					<Layout>{children}</Layout>
-				</Providers>
+				<Providers>{children}</Providers>
 			</body>
 		</html>
 	)
