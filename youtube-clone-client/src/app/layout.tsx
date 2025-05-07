@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Ubuntu } from 'next/font/google'
 import './globals.scss'
-import { Layout } from '@/components/layout/Layout'
 import { Providers } from '@/providers/Providers'
 
 const ubuntu = Ubuntu({
