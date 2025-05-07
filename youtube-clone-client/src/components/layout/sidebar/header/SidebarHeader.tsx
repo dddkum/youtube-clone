@@ -1,7 +1,5 @@
-import { CirclePlay, Menu } from 'lucide-react'
-import { COLORS } from '@/constants/colors.const'
-import Link from 'next/link'
-import { PAGE } from '@/config/public-page.config'
+import { Menu } from 'lucide-react'
+import Logo from '@/components/layout/sidebar/header/Logo'
 
 export function SidebarHeader({ toggleSidebar }: { toggleSidebar: () => void }) {
 	return (
@@ -12,16 +10,7 @@ export function SidebarHeader({ toggleSidebar }: { toggleSidebar: () => void }) 
 			>
 				<Menu />
 			</button>
-			<Link
-				href={PAGE.HOME}
-				className='flex items-center gap-1.5'
-			>
-				<CirclePlay
-					color={COLORS.primary}
-					size={28}
-				/>
-				<span className='font-medium text-xl'>VidddeoME</span>
-			</Link>
+			<Logo/>
 		</div>
 	)
 }
