@@ -25,7 +25,7 @@ export default function SearchPage() {
 			>
 				Search by {searchTerm}
 			</Heading>
-			<div className='grid grid-cols-4 gap-6'>
+			<div className='grid-4-cols'>
 				{isLoading ? (
 					<SkeletonLoader
 						count={4}

@@ -25,18 +25,22 @@ export default async function TrendingPage() {
 	const videos = await videoService.getTrendingVideos()
 	return (
 		<section>
-			<Heading Icon={Flame}>Trending videos</Heading>
-			<div className='grid grid-cols-4 gap-6 mb-10'>
-				{videos.data.length
-					? videos.data.map(video => (
+			{!!videos.data.length ? (
+				<>
+					<Heading Icon={Flame}>Trending videos</Heading>
+					<div className='grid-4-cols'>
+						{videos.data.map(video => (
 							<VideoItem
 								key={video.id}
 								video={video}
 								Icon={Flame}
 							/>
-						))
-					: 'Trending videos are unavailable'}
-			</div>
+						))}
+					</div>
+				</>
+			) : (
+				'Trends are unavailable'
+			)}
 		</section>
 	)
 }

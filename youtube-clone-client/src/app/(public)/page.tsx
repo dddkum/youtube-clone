@@ -17,26 +17,27 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: 'website',
 		url: '/',
-		title: 'VidddeoME',
+		title: 'VidddeoME'
 	}
 }
 
 export default async function Home() {
 	const data = await videoService.getTrendingVideos()
-	const trendingVideos = data.data.slice(0,4)
+	const trendingVideos = data.data.slice(0, 4)
 	return (
 		<>
 			<section>
 				<Heading Icon={Flame}>Trending videos</Heading>
-				<div className='grid grid-cols-4 gap-6 mb-10'>
-					{!!trendingVideos.length &&
-						trendingVideos.map(video => (
-							<VideoItem
-								key={video.id}
-								video={video}
-								Icon={Flame}
-							/>
-						))}
+				<div className='grid-4-cols mb-10'>
+					{trendingVideos.length
+						? trendingVideos.map(video => (
+								<VideoItem
+									key={video.id}
+									video={video}
+									Icon={Flame}
+								/>
+							))
+						: 'Trends are unavailable'}
 				</div>
 			</section>
 			<Explore />

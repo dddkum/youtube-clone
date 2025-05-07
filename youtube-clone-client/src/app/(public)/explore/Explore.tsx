@@ -15,21 +15,21 @@ function Explore() {
 	return (
 		<section>
 			<Heading Icon={Compass}>Explore new videos</Heading>
-			<div className='grid grid-cols-4 gap-6'>
+			<div className='grid-4-cols'>
 				{isLoading ? (
 					<SkeletonLoader
 						count={4}
 						className='h-55 rounded-md'
 					/>
 				) : (
-					!!data?.data.videos.length &&
+					data?.data.videos.length ?
 					data?.data.videos.map(video => (
 						<VideoItem
 							key={video.id}
 							video={video}
 							Icon={Dot}
 						/>
-					))
+					)) : 'Nothing to explore'
 				)}
 			</div>
 		</section>
