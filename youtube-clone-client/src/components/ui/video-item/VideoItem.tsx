@@ -6,6 +6,7 @@ import { Check, type LucideIcon } from 'lucide-react'
 import { convertViews } from '@/utils/convert-views'
 import { convertDate } from '@/utils/convert-date'
 import { COLORS } from '@/constants/colors.const'
+import * as m from 'framer-motion/m'
 
 interface Props {
 	video: IVideoData
@@ -14,8 +15,19 @@ interface Props {
 
 export function VideoItem({ video, Icon }: Props) {
 	return (
-		<div>
-			<div className='relative mb-2'>
+		<m.div
+			whileHover={{ scale: 1.01, y: -5 }}
+			transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+		>
+			<m.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{
+					duration: 0.2,
+					scale: { type: 'spring', visualDuration: 0.6 }
+				}}
+				className='relative mb-2'
+			>
 				<Link href={PAGE.VIDEO(video.videoFileName)}>
 					<Image
 						src={video.thumbnailUrl}
@@ -34,7 +46,7 @@ export function VideoItem({ video, Icon }: Props) {
 						className='absolute left-2 bottom-2 rounded-full shadow'
 					/>
 				</Link>
-			</div>
+			</m.div>
 			<div className='flex items-center justify-between mb-2'>
 				<div className='flex items-center gap-1'>
 					{Icon && (
@@ -73,6 +85,6 @@ export function VideoItem({ video, Icon }: Props) {
 					)}
 				</Link>
 			</div>
-		</div>
+		</m.div>
 	)
 }
