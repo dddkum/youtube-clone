@@ -24,6 +24,10 @@ class VideoService {
 	getExploreVideos() {
 		return api.get<IVideo>(`${this._VIDEOS}/explore`)
 	}
+
+	getGamesVideos() {
+		return api.get<IVideoData[]>(`${this._VIDEOS}/games`)
+	}
 }
 
 export const videoService = new VideoService()
